@@ -27,7 +27,7 @@
 ## The syntax to run the program is:
 ### node liri.js movie-this " "
 
-* ## Logs the following information:
+ ## Logs the following information:
 * Title
 * Year
 * IMDB Rating
@@ -39,11 +39,11 @@
 * Rotten Tomatoes URL
 * if no movie is provided then the program will output information for the movie "Mr. Nobody" with Jared Leto
 
-* The program will take the text inside of random.txt and use it to call the first command with the second part as it's parameter
-* Currently in random.txt, the following text is there:
-* spotify-this-song, "I want it my way"
+* ### The program will take the text inside of random.txt and use it to call the first command with the second part as it's parameter
+* ### Currently in random.txt, the following text is there:
+* ###spotify-this-song, "I want it my way"
 
-* Technologies Utilized
+# Technologies Utilized
 * NodeJS
 * JavaScript
 * Spotify API
