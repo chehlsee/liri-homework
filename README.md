@@ -2,10 +2,10 @@
 ### LIRI is like iPhone's SIRI, however, while SIRI is a Speech Interpretation and Recognition Interface,
 ### LIRI is a Language Interpretation and Recognition Interface. 
 ### LIRI is a command line node app that takes in on of four parameters and returns the relative data.
-* spotify-this-song 
-* movie-this 
-* concert-this
-* do-what-it-says
+`` spotify-this-song ``
+`` movie-this ``
+`` concert-this ``
+`` do-what-it-says ``
 
 1. Deployment
 2. Clone repo
@@ -50,7 +50,7 @@
 
 * ### The program will take the text inside of random.txt and use it to call the first command with the second part as it's parameter
 * ### Currently in random.txt, the following text is there:
-* ###spotify-this-song, "I want it my way"
+`` spotify-this-song, "I want it my way" ``
 
 # Technologies Utilized
 * NodeJS
