@@ -24,5 +24,6 @@
 * NPM spotify-web-api-node
 * NPM dotenv
 * NPM request
-Author
-Chehlsee
+
+
+ #### Chehlsee
