@@ -14,7 +14,34 @@
 5. Screenshot of this Project
 6. Liri Bot
 
+## The syntax to run the program is:
+### node liri.js spotify-this-song "float on"
 ![Working Code in Terminal for Spotify-this-song "Float On"](https://github.com/chehlsee/liri-homework/blob/master/spotify-this-song.png "Spotify-this-song") 
+* ## Logs the following information:
+* artist(s)
+* song name
+* preview link of the song from spotify
+* album
+* if no song is provided then the program will output information for the song "What's my age again?" by Blink 182
+
+## The syntax to run the program is:
+### node liri.js movie-this " "
+
+* ## Logs the following information:
+* Title
+* Year
+* IMDB Rating
+* Country
+* Language
+* Plot
+* Actors
+* Rotten Tomatoes Rating
+* Rotten Tomatoes URL
+* if no movie is provided then the program will output information for the movie "Mr. Nobody" with Jared Leto
+
+* The program will take the text inside of random.txt and use it to call the first command with the second part as it's parameter
+* Currently in random.txt, the following text is there:
+* spotify-this-song, "I want it my way"
 
 * Technologies Utilized
 * NodeJS
@@ -26,6 +53,16 @@
 * NPM spotify-web-api-node
 * NPM dotenv
 * NPM request
+* keys.js
 
 
- #### Chehlsee
+``keys.js code for spotify, bandsintown
+exports.spotify = {
+id:" ",
+secret: " "
+};
+``
+
+
+ # Copyright
+ (C) Chehlsee 2018. All Rights Reserved.
