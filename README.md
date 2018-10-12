@@ -39,6 +39,15 @@
 * Rotten Tomatoes URL
 * if no movie is provided then the program will output information for the movie "Mr. Nobody" with Jared Leto
 
+## The syntax to run the program is:
+### node liri.js concert-this " "
+
+## Logs the following information:
+* Artist's name
+* APP_ID
+* Event List
+* Dates (yyy-mm-dd)
+
 * ### The program will take the text inside of random.txt and use it to call the first command with the second part as it's parameter
 * ### Currently in random.txt, the following text is there:
 * ###spotify-this-song, "I want it my way"
