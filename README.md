@@ -14,7 +14,7 @@
 5. Screenshot of this Project
 6. Liri Bot
 
-![Working Code in Terminal for Spotify-this-song "Float On"](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Spotify-this-song") 
+![Working Code in Terminal for Spotify-this-song "Float On"](https://github.com/chehlsee/liri-homework/blob/master/spotify-this-song.png "Spotify-this-song") 
 
 * Technologies Utilized
 * NodeJS
