@@ -4,7 +4,7 @@
 ### LIRI is a command line node app that takes in on of four parameters and returns the relative data.
 * spotify-this-song 
 * movie-this 
-* concert this
+* concert-this
 * do-what-it-says
 
 1. Deployment
