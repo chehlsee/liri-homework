@@ -113,9 +113,9 @@ function getMovie() {
             console.log("Error occurred.")
         }
         //Response if user does not type in a movie title
-        if (movieName === "Mr. Nobody") {
+        if (movieName === "The Secret Window") {
             console.log("-----------------------");
-            console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
+            console.log("If you haven't watched 'The Secret Window,' then you should: https://www.imdb.com/title/tt0363988/?ref_=fn_al_tt_1");
             console.log("It's on Netflix!");
         }
     });
