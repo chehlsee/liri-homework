@@ -37,7 +37,7 @@
 * Actors
 * Rotten Tomatoes Rating
 * Rotten Tomatoes URL
-* if no movie is provided then the program will output information for the movie "Mr. Nobody" with Jared Leto
+* if no movie is provided then the program will output information for the movie "The Secret Window" with Johnny Depp
 
 ## The syntax to run the program is:
 ### node liri.js concert-this " "
