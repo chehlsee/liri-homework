@@ -6,9 +6,11 @@ var request = require("request");
 var SpotifyPackage = require('node-spotify-api');
 //creates log.txt file
 var filename = 'log.txt';
+console.log(filename);
 
 //return on dontenv to load up environment variables from .env file
-require("dotenv").config();
+var dotEnv = require("dotenv").config();
+console.log(dotEnv);
 
 //argv[2] chooses users actions; argv[3] is input parameter, ie; movie title
 var userCommand = process.argv[2];
@@ -72,8 +74,11 @@ function mySwitch(userCommand) {
             getMovie(secondCommand);
             break;
 
-        case "concert-this":
-            getArtistEventList(secondCommand);
+            case "concert-this":
+            getEvent(secondCommand);
+            break;        
+            case "artist-this":
+            getArtist(secondCommand);
             break;
 
         case "do-what-it-says":
@@ -132,6 +137,92 @@ function doWhat() {
         var cmds = data.toString().split(',');
     });
 }
+
+
+// var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&tomatoes=true&apikey=trilogy";
+
+//Bands in Town - command: concert-this
+function getEvent() {
+    // following OMDB code 
+    var artistName = secondCommand;
+    // Then run a request to the Bands in town API with the event information 
+    var queryUrl = "https://rest.bandsintown.com/artists/" + artistName + "/events?app_id=c64e7377ddf9167af5426b26689ba3f7";
+  
+    console.log(queryUrl);
+    request(queryUrl, function (error, response, body) {
+  
+        // If the request is successful = 200
+        if (!error && response.statusCode === 200) {
+            var body = JSON.parse(body);
+  
+            //Simultaneously output to console and log.txt via NPM simple-node-logger
+            console.log('================ Event Info ================');
+            console.log(body[0])
+            console.log('==================THE END=================');
+
+            //function that prints the parts of one item you want
+
+
+            for(var x = 0; x < body.length; x++){
+                var event = body[x];
+                console.log(
+`Country: ${event.venue.country}
+City: ${event.venue.city}
+${4+4}`    
+                )
+            }
+
+            // for loop that walks through each item of the array, and calls that function on it
+  
+        } else {
+            //else - throw error
+            console.log("Error occurred.")
+        }
+        //Response if user does not type in an event title
+        if (artistName === "Taking Back Sunday") {
+            console.log("-----------------------");
+            console.log("If you haven't heard of them,' then you should");
+            console.log("It's on Youtube!");
+        }
+    });
+  }
+
+  https://rest.bandsintown.com/artists/u2?app_id=c64e7377ddf9167af5426b26689ba3f7
+  function getArtist() {
+    // following OMDB code 
+    var artistName = secondCommand;
+    // Then run a request to the Bands in town API with the event information 
+    var queryUrl = "https://rest.bandsintown.com/artists/" + artistName + "?app_id=c64e7377ddf9167af5426b26689ba3f7";
+  
+    console.log(queryUrl);
+    request(queryUrl, function (error, response, body) {
+  
+        // If the request is successful = 200
+        if (!error && response.statusCode === 200) {
+            var body = JSON.parse(body);
+  
+            //Simultaneously output to console and log.txt via NPM simple-node-logger
+            console.log('================ Event Info ================');
+            console.log("ID: " + body.id);
+            console.log("Name: " + body.name);
+            console.log("URL: " + body.url);
+            console.log("Image_URL: " + body.image_url);
+            console.log("Thumb_URL: " + body.thumb_url);
+            console.log("Facebook_Page_URL: " + body.facebook_page_url);
+            console.log('==================THE END=================');
+  
+        } else {
+            //else - throw error
+            console.log("Error occurred.")
+        }
+        //Response if user does not type in an event title
+        if (artistName === "Taking Back Sunday") {
+            console.log("-----------------------");
+            console.log("If you haven't heard of them,' then you should");
+            console.log("It's on Youtube!");
+        }
+    });
+  }
 
 
 //Closes mySwitch func - Everything except the call must be within this scope
