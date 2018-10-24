@@ -1,8 +1,8 @@
-console.log('this is loaded');
+console.log('all items are loaded');
 
 exports.spotify = {
-  id: "5967e119f25749c6b01a87a1992516a9",
-  secret: "4c1a103a30dc419db729d085b6e2a2d4"
+  id: "6454c72133414c8bbd6c70312941e6b5",
+  secret: "7809b0f646ca425e836b8455751c05b9"
 };
 
 
@@ -13,3 +13,5 @@ exports.bandsInTownAPI = {
 exports.omdb = {
   id: "trilogy"
 }
+
+// the file will export a module object with the components inside it
