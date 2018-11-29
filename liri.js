@@ -1,6 +1,13 @@
 //vars
+
+//return on dotenv to load up environment variables from .env file
+var dotEnv = require("dotenv").config();
+console.log(dotEnv);
+
 // this is the import for the exporting files
 var keys = require("./keys.js");
+// used to access your keys information
+var spotify = new Spotify(keys.spotify);
 // include the fs package for reading and writing packages
 var fs = require("fs");
 // include the request npm package (make sure to run npm install request in the terminal for this folder first or it will not run)
@@ -9,13 +16,13 @@ var request = require("request");
 var omdb = require("omdbapi");
 //var Spotify = require('spotify-web-api-node');
 var SpotifyPackage = require('node-spotify-api');
+// add moment
+const moment = require("moment");
 //creates log.txt file
 var filename = 'log.txt';
 console.log(filename);
 
-//return on dotenv to load up environment variables from .env file
-var dotEnv = require("dotenv").config();
-console.log(dotEnv);
+
 
 //argv[2] chooses users actions; argv[3] is input parameter, ie; movie title
 // process.argv will print out any command line arguments
