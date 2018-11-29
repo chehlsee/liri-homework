@@ -109,7 +109,7 @@ function getMovie() {
     var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&tomatoes=true&apikey=trilogy";
 
     // this line is just to help us debug against the actual URL
-    console.log(queryURL);
+    // console.log(queryURL);
 
     request(queryUrl, function (error, response, body) {
 
@@ -127,7 +127,8 @@ function getMovie() {
             console.log("Language: " + body.Language);
             console.log("Plot: " + body.Plot);
             console.log("Actors: " + body.Actors);
-            console.log("Rotten Tomatoes Rating: " + body/Ratings[2].Value);
+            // when i am trying to console.log the rating it is breaking the code in terminal and i am not sure how to fix it 
+            // console.log("Rotten Tomatoes Rating: " + body.Ratings[2].Value);
             console.log("Rotten Tomatoes URL: " + body.tomatoURL);
             console.log("================= THE END ==========");
         } else {
